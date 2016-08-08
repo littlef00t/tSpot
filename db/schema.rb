@@ -11,12 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160808182423) do
+ActiveRecord::Schema.define(version: 20160808231455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "food_tables", force: :cascade do |t|
+  create_table "foods", force: :cascade do |t|
+    t.string   "name",        null: false
+    t.boolean  "vegetarian",  null: false
+    t.boolean  "vegan",       null: false
+    t.boolean  "gf",          null: false
+    t.text     "description"
+    t.text     "hours",       null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
