@@ -19,7 +19,8 @@
 .DS_Store
 node_modules
 app/assets/javascripts/bundle.js
-tmp
+bundle.js
+bundle.js.map
 
 # Ignore application configuration
 /config/application.yml
