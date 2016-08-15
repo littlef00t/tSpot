@@ -6,6 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Foods.create(name: 'Veg1', vegetarian: true, vegan: true, gf: true; hours: 'M-F 12PM - 9PM');
-Foods.create(name: 'Meat', vegetarian: true, vegan: false, gf: true; hours: 'M-F 5PM - 10PM');
-Foods.create(name: 'Noms', vegetarian: false, vegan: false, gf: true; hours: 'M-F 8AM - 2PM');
+Foods.create(name: 'Veg1', vegetarian: true, vegan: true, gf: true, hours: 'M-F 12PM - 9PM');
+Foods.create(name: 'Meat', vegetarian: true, vegan: false, gf: true, hours: 'M-F 5PM - 10PM');
+Foods.create(name: 'Noms', vegetarian: false, vegan: false, gf: true, hours: 'M-F 8AM - 2PM');
