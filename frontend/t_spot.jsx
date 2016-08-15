@@ -1,15 +1,14 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 
-var test = React.createClass({
+var Test = React.createClass({
   render() {
     return(
-      <div>It worked!</div>
+      <div>I am a react component!</div>
     );
   }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log('testing...');
-  ReactDOM.render(<div>{test}</div>, document.getElementById('content'));
+  ReactDOM.render(<Test />, document.getElementById('content'));
 });
