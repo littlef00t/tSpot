@@ -1,12 +1,18 @@
-//var path = require('path'); add?
+// const path = require('path');
 
 module.exports = {
   context: __dirname,
   entry: "./frontend/t_spot.jsx",
   output: {
-    path: "./",
-    filename: "bundle.js"
+    path: path.join(__dirname, 'app', 'assets', 'javascripts'),
+    filename: "bundle.js",
+    devtoolModuleFilenameTemplate: '[resourcePath]',
+    devtoolFallbackModuleFilenameTemplate: '[resourcePath]?[hash]'
   },
+  // output: {
+  //   path: "./",
+  //   filename: "bundle.js"
+  // },
   module: {
     loaders: [
       {
