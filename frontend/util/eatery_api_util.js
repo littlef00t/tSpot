@@ -8,6 +8,16 @@ const ApiUtil = {
       }
     })
   }
+  //alternate way of saying the above
+  // fetchAllEateries: () => {
+  //   $.ajax({
+  //     url: '/foods',
+  //     method: 'get',
+  //     success: function(eateries){
+  //       console.log(eateries);
+  //     }
+  //   })
+  // }
 };
 
 module.exports = ApiUtil;
