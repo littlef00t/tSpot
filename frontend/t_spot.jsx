@@ -1,5 +1,6 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
+const EateryStore = require('./stores/eatery');
 
 var Test = React.createClass({
   render() {
