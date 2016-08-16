@@ -3,36 +3,52 @@ const EateryStore = require('../stores/eatery');
 const EateryActions = require('../actions/eatery_actions');
 
 const EateryIndex = React.createClass({
-  getInitialState(){
+  getInitialState() {
     return {
       eateries: EateryStore.all()
     };
   },
-  componentDidMount(){
-    console.log('component mounted');
-    EateryStore.addListener(this._handleChange);
+
+  componentDidMount() {
+    this.eateryListener = EateryStore.addListener(this._handleChange);
     EateryActions.fetchAllEateries();
   },
-  _handleChange(){
+
+  componentWillUnmount() {
+    this.eateryListener.remove();
+  },
+
+  _handleChange() {
     this.setState({
       eateries: EateryStore.all()
     });
   },
-  render(){
-    var eateries = this.state.eateries;
+
+  render() {
+    let eateries = this.state.eateries;
+
+    let foods;
+    if (eateries) {
+      foods = <ul>
+        {
+        eateries.map(function(eatery){
+          return (
+            <li key={eatery.id}>
+              {eatery.name}
+            </li>
+          )
+        })
+        }
+      </ul>
+    } else {
+      foods = <div></div>
+    }
+    console.log(eateries[0]);
 
     return (
       <div>
-        {
-          eateries.map(function(eatery){
-            return (
-              <div key={eatery.id}>
-                {eatery.name}
-              </div>
-            )
-          })
-
-        }
+        <h3>Here are the eateries!</h3>
+        {foods}
       </div>
     )
   }
