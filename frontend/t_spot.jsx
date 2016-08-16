@@ -2,8 +2,7 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const EateryStore = require('./stores/eatery');
 const EateryApiUtil = require('./util/eatery_api_util');
-
-window.EateryApiUtil = EateryApiUtil;
+const EateryActions = require('./actions/eatery_actions');
 
 
 var Test = React.createClass({
