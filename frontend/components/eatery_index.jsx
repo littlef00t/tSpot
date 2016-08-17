@@ -26,29 +26,18 @@ const EateryIndex = React.createClass({
 
   render() {
     let eateries = this.state.eateries;
-
-    let foods;
-    if (eateries) {
-      foods = <ul>
-        {
-        eateries.map(function(eatery){
-          return (
-            <li key={eatery.id}>
-              {eatery.name}
-            </li>
-          )
-        })
-        }
-      </ul>
-    } else {
-      foods = <div></div>
-    }
-    console.log(eateries[0]);
+    console.log(eateries);
 
     return (
       <div>
         <h3>Here are the eateries!</h3>
-        {foods}
+        <ul>
+          {
+            Object.keys(eateries).map(function(obj_id) {
+              return <li key={obj_id}>{eateries[obj_id].name}</li>
+            })
+          }
+        </ul>
       </div>
     )
   }

@@ -6,6 +6,7 @@ const EateryActions = require('./actions/eatery_actions');
 const EateryIndex = require('./components/eatery_index');
 
 window.EateryIndex = EateryIndex;
+window.EateryActions = EateryActions;
 
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<EateryIndex />, document.getElementById('content'));

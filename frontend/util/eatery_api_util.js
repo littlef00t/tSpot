@@ -4,6 +4,7 @@ const ApiUtil = {
       url: '/foods',
       method: 'get',
       success: (response) => {
+        console.log(response);
         success(response);
       }
     })
